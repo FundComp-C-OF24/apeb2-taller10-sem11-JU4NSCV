@@ -1,0 +1,91 @@
+INICIO
+Metodo Principal()
+    Defenir Matriz factor1, factor2, resultado
+    >> "INGRESE OPERACION | 1. SUMA | 2. RESTA | 3. MULTIPLICACION |"
+    << op como Entero
+    >> "Ingrese tamaño para la matriz"
+    << tam como Entero
+    Nueva Matriz factor1[tam][tam]
+    Nueva Matriz factor2[tam][tam]
+    Nueva Matriz resultado[tma][tam]
+    Para i desde 0 hasta tamaño(factor1) con paso 1 Hacer
+        Para j desde 0 hasta tamaño(factor1[i]) con paso 1 Hacer
+            factor1[i][j] = NumeroAleatorio()
+            factor1[i][j] = NumeroAleatorio()
+        Fin Para
+    Fin Para
+    Segun op Hacer
+        Caso 1:
+            >> "SUMA DE MATRICES"
+            >> "PRIMERA MATRIZ"
+            Llamar PresentarMatriz(factor1)
+            >> "SEGUNDA MATRIZ"
+            Llamar PresentarMatriz(factor2)
+            >> "RESULTADO"
+            Llamar SumaDeMatrices(factor1, factor2, resultado)
+        Fin Caso
+        Caso 2:
+            >> "RESTA DE MATRICES"
+            >> "PRIMERA MATRIZ"
+            Llamar PresentarMatriz(factor1)
+            >> "SEGUNDA MATRIZ"
+            Llamar PresentarMatriz(factor2)
+            >> "RESULTADO"
+            Llamar RestaDeMatrices(factor1, factor2, resultado)
+        Fin Caso
+        Caso 3:
+            >> "MULTIPLICACION DE MATRICES"
+            >> "PRIMERA MATRIZ"
+            Llamar PresentarMatriz(factor1)
+            >> "SEGUNDA MATRIZ"
+            Llamar PresentarMatriz(factor2)
+            >> "RESULTADO"
+            Llamar MultiplicacionDeMatrices(factor1, factor2, resultado)
+        Fin Caso
+    Fin Segun
+Fin Metodo
+
+Metodo PresentarMatriz(matriz)
+    Para i desde 0 hasta tamaño(matriz) con paso 1  Hacer
+        Para j desde 0 hasta tamaño(matriz[i]) con paso 1  Hacer
+            >> " [" + matriz[i][j] + "] "
+        Fin Para
+        >> salto
+    Fin Para
+Fin Metodo
+
+Metodo SumaDeMatrices(matriz1, matriz2, resultado)
+    Para i desde 0 hasta tamaño(matriz1) con paso 1  Hacer
+        Para j desde 0 hasta tamaño(matriz1[i]) con paso 1  Hacer
+            resultado[i][j] = matriz1[i][j] + matriz2[i][j]
+        Fin Para
+    Fin Para
+    Llamar PresentarMatriz(resultado)
+Fin Metodo
+
+Metodo RestaDeMatrices(matriz1, matriz2, resultado)
+    Para i desde 0 hasta tamaño(matriz1) con paso 1  Hacer
+        Para j desde 0 hasta tamaño(matriz1[i]) con paso 1  Hacer
+            resultado[i][j] = matriz1[i][j] - matriz2[i][j]
+        Fin Para
+    Fin Para
+    Llamar PresentarMatriz(resultado)
+Fin Metodo
+
+Metodo MultiplicacionDeMatrices(matriz1, matriz2, resultado)
+    Para i desde 0 hasta tamaño(matriz1) con paso 1 Hacer
+        Para j desde 0 hasta tamaño(matriz1[i]) con paso 1 Hacer
+            resultado[i][j] = 0
+            Para k desde 0 hasta tamaño(matriz1) con paso 1 Hacer
+                resultado[i][j] = resultado[i][j] + (matriz1[i][k] * matriz2[k][j])
+            Fin Para
+        Fin Para
+    Fin Para
+    Llamar PresentarMatriz(resultado)
+Fin Metodo
+
+Metodo  NumeroAleatorio()
+    r = Aleatorio(1, 10)
+    Devolver r
+Fin Metodo
+FIN

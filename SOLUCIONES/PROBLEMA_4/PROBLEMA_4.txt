@@ -1,0 +1,56 @@
+INICIO
+// Declaración de variables
+entero op
+cadena nombre
+entero ced
+
+// Función principal
+procedimiento principal()
+    >> "Ingrese nombre del usuario"
+    << nombre
+    >> "Ingrese cedula"
+    << ced
+    
+    hacer
+        >> "Seleccione | 1. Plantilla de luz | 2. Valor de inmueble | 3. Salir"
+        << op
+        
+        seleccionar (op)
+            caso 1:
+                >> "PLANTILLA DE LUZ"
+                >> "Ingrese costo del kilovatio"
+                real costokv
+                << costokv
+                >> "Ingrese los kilovatios al mes"
+                real numkv
+                << numkv
+                >> "Cliente " + nombre + " con cédula " + ced + " debe cancelar el valor de $" + CalculoKilovatio(costokv, numkv));
+            fin caso
+            caso 2:
+                >> "IMPUESTO AL PREDIO"
+                >> "Ingrese el precio del inmueble"
+                real precio
+                << precio
+                >> "Cliente " + nombre + " con cédula " + ced + " tiene un bien inmueble valorado en $" + precio + " y tiene que pagar de predio $" + CostoInmueble(precio)
+            fin caso
+        fin seleccionar
+        
+    mientras (op != 3)
+    
+fin procedimiento
+
+
+función CalculoPlantillaLuz(cadena nombre, entero ced)
+    real plantilla = costokv * numkv
+    devolver plantilla
+fin función
+
+
+función CalculoValorInmueble(real precio)
+    
+    real predio = precio * 0.02
+    devolver predio
+
+fin función
+
+FIN

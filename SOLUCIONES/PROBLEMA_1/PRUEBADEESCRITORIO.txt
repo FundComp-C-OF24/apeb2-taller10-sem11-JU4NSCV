@@ -1,0 +1,15 @@
+Ingrese filas para Matriz
+3
+Ingrese columnas para Matriz
+2
+=============
+Numeros pares
+2 8 8 8
+=============
+Numeros impares
+9 9
+=============
+ [2] [9]
+ [8] [9]
+ [8] [8]
+El promedio de la matriz es: 8.8

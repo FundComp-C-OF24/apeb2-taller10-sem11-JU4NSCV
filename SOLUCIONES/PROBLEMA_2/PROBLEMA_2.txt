@@ -1,0 +1,62 @@
+INICIO
+// Declaración de variables
+real lad
+real base
+real altura
+real area
+
+// Función principal
+procedimiento principal()
+    >> "Escoja la operacion | 1. AREA CUADRADO | 2. AREA TRIANGULO | 3. AREA RECTANGULO"
+    entero op
+    << op
+    
+    seleccionar (op)
+        caso 1:
+            >> "Ingrese lado de cuadrado"
+            << lad
+            area = AreaCuadrado(lad)
+            >> "El area del cuadrado es: " + area
+        fin caso
+        caso 2:
+            >> "Ingrese base de triangulo"
+            << base
+            >> "Ingrese la altura del triangulo"
+            << altura
+            area = AreaTriangulo(base, altura)
+            >> "El area del triangulo es: " + area
+        fin caso
+        caso 3:
+            >> "Ingrese base de rectangulo"
+            << base
+            >> "Ingrese la altura del rectangulo"
+            << altura
+            area = AreaRectangulo(base, altura)
+            >> "El area del rectangulo es: " + area
+        fin caso
+        defecto:
+            >> "Operacion Incorrecta"
+    fin seleccionar
+fin procedimiento
+
+// Calcular área de un cuadrado
+función real AreaCuadrado(real lad)
+    real area
+    area = lad * lad
+    devolver area
+fin función
+
+// Calcular área de un triángulo
+función real AreaTriangulo(real base, real altura)
+    real area
+    area = (base * altura) / 2
+    devolver area
+fin función
+
+// Calcular área de un rectángulo
+función real AreaRectangulo(real base, real altura)
+    real area
+    area = base * altura
+    devolver area
+fin función
+FIN

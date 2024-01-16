@@ -1,0 +1,54 @@
+//SUMA
+INGRESE OPERACION | 1. SUMA | 2. RESTA | 3. MULTIPLICACION |
+1
+Ingrese tamaño para la martriz
+4
+SUMA DE MATRIZES     
+PIMERA MATIZ
+ [5]  [1]  [1]  [7]  
+ [10]  [1]  [3]  [1] 
+ [5]  [3]  [3]  [9]  
+ [6]  [7]  [6]  [1]  
+SEGUNDA MATRIZ       
+ [2]  [7]  [8]  [4]  
+ [9]  [8]  [3]  [8]  
+ [7]  [1]  [9]  [10] 
+ [4]  [3]  [3]  [3]
+resultado
+ [7]  [8]  [9]  [11]
+ [19]  [9]  [6]  [9]
+ [12]  [4]  [12]  [19]
+ [10]  [10]  [9]  [4]
+ //MULTIPLICACION
+ INGRESE OPERACION | 1. SUMA | 2. RESTA | 3. MULTIPLICACION |
+3
+Ingrese tamaño para la martriz
+2
+MULTIPLICACION DE MATRIZES
+PIMERA MATIZ
+ [4]  [3]
+ [7]  [4]
+SEGUNDA MATRIZ
+ [7]  [9]
+ [2]  [2]
+RESULTADO
+ [34]  [42]
+ [57]  [71]
+ //RESTA
+ INGRESE OPERACION | 1. SUMA | 2. RESTA | 3. MULTIPLICACION |
+2
+Ingrese tamaño para la martriz
+3
+RESTA DE MATRIZES
+PIMERA MATIZ
+ [4]  [8]  [2]
+ [8]  [10]  [7]
+ [10]  [1]  [10]
+SEGUNDA MATRIZ
+ [4]  [3]  [1]
+ [2]  [9]  [9]
+ [7]  [6]  [10]
+RESULTADO
+ [0]  [5]  [1]
+ [6]  [1]  [-2]
+ [3]  [-5]  [0]

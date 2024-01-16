@@ -1,0 +1,20 @@
+Ingrese nombre del usuario
+Ana
+Ingrese cedula
+10010
+Seleccione | 1. Plantilla de luz | 2. Valor de inmueble | 3. Salir
+1
+PLANTILLA DE LUZ
+Ingrese costo del kilovatio
+0,5
+Ingrese los kilovatios al mes
+50
+Cliente Ana con cédula 10010 debe cancelar el valor de $25.0      
+Seleccione | 1. Plantilla de luz | 2. Valor de inmueble | 3. Salir
+2
+IMPUESTO AL PREDIO
+Ingrese el precio del inmuble
+30000
+Cliente Ana con cédula 10010 tiene un bien inmueble valorado en $30000.0 y tiene que pagar de predio $600.0
+Seleccione | 1. Plantilla de luz | 2. Valor de inmueble | 3. Salir
+3

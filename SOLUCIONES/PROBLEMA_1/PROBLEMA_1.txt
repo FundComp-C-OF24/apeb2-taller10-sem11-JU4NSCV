@@ -1,68 +1,81 @@
 INICIO
+// Declaración de variables
+cadena pares = " "
+cadena impares = " "
+real promedio = 0
 
-Metodo Principal()
-    Entero fila, columna
+// Función principal
+procedimiento principal()
+    cadena fila
+    cadena columna
+
     >> "Ingrese filas para Matriz"
-    <<fila como Entero
+    << fila
     >> "Ingrese columnas para Matriz"
-    <<columna como Entero
-    Nueva matriz[fila][columna]
-    Para i desde 0 hasta tamaño(matriz)con paso 1  Hacer
-        Para j desde 0 hasta tamaño(matriz[i])con paso 1  Hacer
-            matriz[i][j] = Aleatorio(10-1)
-        Fin Para
-    Fin Para
+    << columna
+    entero matriz[fila][columna]
+    LlenadoMatriz(matriz)
 
     >> "============="
-    Llamar NumerosPares(matriz)
-    >> "============="
-    Llamar NumerosImpares(matriz)
-    >> "============="
-    Llamar PromedioMatriz(matriz, fila, columna)
+    >> "Matriz generada"
+    para cada i de 0 hasta longitud(matriz) - 1 hacer
+        para cada j de 0 hasta longitud(matriz[i]) - 1 hacer
+            >> "[" + matriz[i][j] + "]"
+        fin para
+        >> nueva línea
+    fin para
     
-Fin Metodo
-
-Metodo NumerosPares(matriz)
+    >> "============="
     >> "Numeros pares"
-    Para i desde 0 hasta tamaño(matriz)con paso 1  Hacer
-        Para j desde 0 hasta tamaño(matriz[i])con paso 1  Hacer
-            Si (matriz[i][j] % 2) == 0 Entonces
-                >> matriz[i][j] + " "
-            Fin Si
-        Fin Para
-    Fin Para
-    >> Salto
-Fin Metodo
-
-Metodo NumerosImpares(matriz)
+    NumerosPares(matriz)
+    >> pares
+    
+    >> "============="
     >> "Numeros impares"
-    Para i desde 0 hasta tamaño(matriz)con paso 1  Hacer
-        Para j desde 0 hasta tamaño(matriz[i])con paso 1  Hacer
-            Si (matriz[i][j] % 2) ≠ 0 Entonces
-                >> matriz[i][j] + " "
-            Fin Si
-        Fin Para
-    Fin Para
-    >> Salto
-Fin Metodo
-
-Metodo PromedioMatriz(matriz, fila, columna)
-    Real promedio = 0
-    Para i desde 0 hasta tamaño(matriz) con paso 1  Hacer
-        Para j desde 0 hasta tamaño(matriz[i]) con paso 1  Hacer
-            promedio = promedio + matriz[i][j]
-        Fin Para
-    Fin Para
+    NumerosImpares(matriz)
+    >> impares
     
-    Para i desde 0 hasta tamaño(matriz) con paso 1  Hacer
-        Para j desde 0 hasta tamaño(matriz[i]) con paso 1  Hacer
-            >> " [" + matriz[i][j] + "]"
-        Fin Para
-        >> Salto
-    Fin Para
-    
-    promedio = promedio / (fila * columna)
+    >> "============="
+    >> "Promedio de la matriz"
+    PromedioMatriz(matriz, fila, columna)
     >> "El promedio de la matriz es: " + promedio
-Fin Metodo
 
+fin procedimiento principal
+
+procedimiento LlenadoMatriz(entero matriz[][])
+    para cada i de 0 hasta longitud(matriz) - 1 hacer
+        para cada j de 0 hasta longitud(matriz[i]) - 1 hacer
+            matriz[i][j] = aleatorio(1, 10)
+        fin para
+    fin para
+fin procedimiento
+
+procedimiento NumerosPares(entero matriz[][])
+    para cada i de 0 hasta longitud(matriz) - 1 hacer
+        para cada j de 0 hasta longitud(matriz[i]) - 1 hacer
+            si matriz[i][j] es par entonces
+                pares = pares + matriz[i][j] + " "
+            fin si
+        fin para
+    fin para
+fin procedimiento
+
+procedimiento NumerosImpares(entero matriz[][])
+    para cada i de 0 hasta longitud(matriz) - 1 hacer
+        para cada j de 0 hasta longitud(matriz[i]) - 1 hacer
+            si matriz[i][j] es impar entonces
+                impares = impares + matriz[i][j] + " "
+            fin si
+        fin para
+    fin para
+fin procedimiento
+
+procedimiento PromedioMatriz(entero matriz[][], entero fila, entero columna)
+    para cada i de 0 hasta longitud(matriz) - 1 hacer
+        para cada j de 0 hasta longitud(matriz[i]) - 1 hacer
+            promedio = promedio + matriz[i][j]
+        fin para
+    fin para
+    promedio = promedio / (fila * columna)
+fin procedimiento
 FIN

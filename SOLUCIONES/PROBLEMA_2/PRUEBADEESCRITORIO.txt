@@ -1,0 +1,22 @@
+//CUADRADO
+Escoja la operacion | 1. AREA CUADRADO | 2. AREA TRIANGULO | 3. AREA RECTANGULO
+1
+Ingrese lado de cuadrado
+4
+El area del cuadrado es: 256.0
+//TRIANGULO
+Escoja la operacion | 1. AREA CUADRADO | 2. AREA TRIANGULO | 3. AREA RECTANGULO
+2
+Ingrese base de triangualo
+5
+Ingrese la altura del triangualo
+7
+El area del triangualo es: 17.5
+//RECTANGULO
+Escoja la operacion | 1. AREA CUADRADO | 2. AREA TRIANGULO | 3. AREA RECTANGULO
+3
+Ingrese base de rectangulo
+5
+Ingrese la altura del rectangulo
+4
+El area del rectangulo es: 20.0

@@ -1,0 +1,47 @@
+INICIO
+    // Declaración de variables
+real nota1
+real nota2
+real nota3
+real examen
+real total
+
+// Función principal
+procedimiento principal()
+    >> "INGRESE NOTA DEL PRIMER PARCIAL"
+    << nota1
+    >> "INGRESE NOTA DEL SEGUNDO PARCIAL"
+    << nota2
+    >> "INGRESE NOTA DEL TERCER PARCIAL"
+    << nota3
+    >> "INGRESE NOTA DEL EXAMEN QUIMESTRAL"
+    << examen
+    
+    // Calcular el promedio ponderado
+    total = Promedio(nota1, nota2, nota3, examen)
+    
+    // Evaluar el promedio cualitativo
+    seleccionar
+        caso total <= 5:
+            >> "PROMEDIO CUALITATIVO ES REGULAR => " + total
+        caso total <= 8:
+            >> "PROMEDIO CUALITATIVO ES BUENO => " + total
+        caso total <= 9:
+            >> "PROMEDIO CUALITATIVO ES MUY BUENO => " + total
+        caso total <= 10:
+            >> "PROMEDIO CUALITATIVO ES SOBRESALIENTE => " + total
+    fin seleccionar
+    
+fin procedimiento
+
+// Calcular el promedio ponderado
+función real Promedio(real nota1, real nota2, real nota3, real examen)
+    real promedio
+    promedio = ((nota1 + nota2 + nota3) / 3) * 0.8
+    promedio += examen * 0.2
+    devolver promedio
+fin función
+
+
+
+FIN
